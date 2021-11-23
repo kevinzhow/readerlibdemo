@@ -1,5 +1,7 @@
 package com.kevinzhow.readerlibx
 
 class ReaderHello {
-    val helloTag = "hello from reader"
+    companion object {
+        val helloTag = "hello from reader"
+    }
 }
