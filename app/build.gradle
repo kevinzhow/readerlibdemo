@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 
+group "com.github.kevinzhow"
+version "1.0"
+
 android {
     compileSdk 31
 
