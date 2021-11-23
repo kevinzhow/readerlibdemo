@@ -8,5 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "readerlibdemo"
 include ':app'
-include ':readerlib'
 include ':readerlibx'
