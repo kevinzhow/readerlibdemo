@@ -1,6 +1,6 @@
 # Readerlib demo
 
-2 ways of how to share Android Module
+3 ways of how to share Android Module
 
 ## Way 1 Publish to Github Repo
 
@@ -163,6 +163,9 @@ dependencies {
 }
 ```
 
+## Included Git repositories plugin for Gradle
+
+https://melix.github.io/includegit-gradle-plugin/0.1.2/index.html
 
 ## Ref
 
