@@ -35,7 +35,7 @@ afterEvaluate { // <-- needed because only here components are available
 
 ## Run Gradle Task
 
-Make sure all your gralde tasks were builded.
+Make sure all your gralde tasks were built.
 
 run `publishAllPublicationsToGitHubRepository` task to generate all files to the `github_publish` folder
 
