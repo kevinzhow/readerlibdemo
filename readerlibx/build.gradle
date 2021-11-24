@@ -58,7 +58,11 @@ afterEvaluate { // <-- needed because only here components are available
         repositories {
             maven {
                 name 'GitHub'
-                url "file://Users/zhoukaiwen/GitHub/readerlibdemo/github_publish"
+                url "https://maven.pkg.github.com/kevinzhow/readerlibdemo"
+                credentials {
+                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                    password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
+                }
             }
         }
     }
