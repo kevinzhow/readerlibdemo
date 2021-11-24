@@ -64,3 +64,7 @@ dependencies {
   implementation 'com.github.kevinzhow:readerlibx:1.0.0'
 }
 ```
+
+## Ref
+
+https://notificare.com/blog/2020/07/10/Share-Your-Android-Code-Between-Projects/
