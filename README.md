@@ -130,7 +130,7 @@ jobs:
         USERNAME: kevinzhow
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: ./gradlew assembleRelease publish
-```
+``` 
 
 Every time we push the commits, it will build and publish to github package
 
@@ -163,11 +163,63 @@ dependencies {
 }
 ```
 
-## Included Git repositories plugin for Gradle
+## Way 3 Included Git repositories plugin for Gradle
 
-https://melix.github.io/includegit-gradle-plugin/0.1.2/index.html
+### Config build.gradle
+
+`readerlibx/build.gradle`
+
+```
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId 'com.github.kevinzhow'
+                artifactId 'readerlibx'
+                version '1.0.0'
+            }
+        }
+    }
+}
+```
+
+### settings.gradle
+
+```
+plugins {
+    id 'me.champeau.includegit' version '0.1.2'
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+    gitRepositories {
+        include('readerlibx') {
+            uri = 'https://github.com/kevinzhow/readerlibdemo.git'
+            branch = 'main'
+        }
+    }
+}
+```
+
+### Use it
+
+```
+implementation 'com.github.kevinzhow:readerlibx'
+```
 
 ## Ref
 
 https://notificare.com/blog/2020/07/10/Share-Your-Android-Code-Between-Projects/
 https://qiita.com/Horie1024/items/be2b5eb768f36794c4f1
+https://melix.github.io/includegit-gradle-plugin/0.1.2/index.html
