@@ -4,9 +4,6 @@ plugins {
     id 'maven-publish'
 }
 
-group "com.github.kevinzhow"
-version "1.0"
-
 android {
     compileSdk 31
 
@@ -51,7 +48,7 @@ afterEvaluate { // <-- needed because only here components are available
                 from components.release
                 groupId 'com.github.kevinzhow'
                 artifactId 'readerlibx'
-                version '1.0.0'
+                version '1.0.1'
             }
         }
 
