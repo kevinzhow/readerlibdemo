@@ -77,13 +77,13 @@ This works with Github Action
 
 `readerlibx/build.gradle`
 
+```
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'maven-publish'
 }
 
-```
 afterEvaluate {
     publishing {
         publications {
