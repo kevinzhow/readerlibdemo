@@ -1,0 +1,97 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.kevinzhow",
+    "module": "readerlibx",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "readerlibx-1.0.0.aar",
+          "url": "readerlibx-1.0.0.aar",
+          "size": 34844,
+          "sha512": "533006ae54f542b30654825b15e26c42f536b02cb82b191904f753df2d4d88b523fade248567851a356df49179da43dd4abb1ae0aaace9e99f4aaeafbf1e4685",
+          "sha256": "17ff3d5b41ae04c9a9ac79e368aeff6607c361b5c67602d3dd597324c951ef1a",
+          "sha1": "e47cfcd4d86518ffd5b49bf5f2a8dc61bdb6051f",
+          "md5": "0543ef65646de3febd9bcc470b63b5d3"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.7.0"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.4.0"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.4.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "readerlibx-1.0.0.aar",
+          "url": "readerlibx-1.0.0.aar",
+          "size": 34844,
+          "sha512": "533006ae54f542b30654825b15e26c42f536b02cb82b191904f753df2d4d88b523fade248567851a356df49179da43dd4abb1ae0aaace9e99f4aaeafbf1e4685",
+          "sha256": "17ff3d5b41ae04c9a9ac79e368aeff6607c361b5c67602d3dd597324c951ef1a",
+          "sha1": "e47cfcd4d86518ffd5b49bf5f2a8dc61bdb6051f",
+          "md5": "0543ef65646de3febd9bcc470b63b5d3"
+        }
+      ]
+    }
+  ]
+}

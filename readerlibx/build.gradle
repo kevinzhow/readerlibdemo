@@ -54,5 +54,12 @@ afterEvaluate { // <-- needed because only here components are available
                 version '1.0.0'
             }
         }
+
+        repositories {
+            maven {
+                name 'GitHub'
+                url "file://Users/zhoukaiwen/GitHub/readerlibdemo/github_publish"
+            }
+        }
     }
 }
